@@ -1,0 +1,22 @@
+1. Install the package arc-gtk-theme or canta-gtk-theme-git (AUR) or layan-gtk-theme-git (AUR) or orchis-theme or
+
+	 whitesur-cursor-theme-git whitesur-gtk-theme-git whitesur-icon-theme
+	 
+2. Put in /etc/environment the value
+
+    GTK_THEME=WhiteSur-Dark-blue
+
+3. Set the commands
+
+    gsettings set org.gnome.desktop.interface gtk-theme WhiteSur-Dark-blue
+    gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+    gsettings set org.gnome.desktop.interface cursor-theme WhiteSur-cursors
+    gsettings set org.gnome.desktop.interface icon-theme WhiteSur-Dark
+
+4. Put in ~/.config/gtk-3.0/settings.ini the lines
+
+	[Settings]
+	gtk-icon-theme-name = WhiteSur-Dark
+	gtk-theme-name = WhiteSur-Dark-blue
+	gtk-cursor-theme-name = WhiteSur-cursors
+	gtk-application-prefer-dark-theme = true

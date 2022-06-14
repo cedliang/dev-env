@@ -1,0 +1,35 @@
+1.  Install arch with the packages in arch-packages.txt
+
+2.  Run arch-setup.sh
+
+3.  Edit /etc/pacman.conf to activate colour and parallel downloads
+
+4.  Disable wifi power management by writing to /etc/NetworkManager/NetworkManager.conf the following lines:    
+     [connection]
+     wifi.powersave = 2
+    
+5.  Move .zshrc and .tmux.conf file into home
+
+6.  Get PragmataPro Liga font, place it in /usr/share/fonts/TTF, then run sudo fc-cache -f -v
+
+7.  Install Ly desktop manager with 
+    
+     paru -S ly
+    
+    Enable ly with 
+   
+     sudo systemctl enable ly.service
+    
+8.  Install sway:
+
+     paru -S sway foot polkit python-i3ipc noto-fonts-emoji mako swaybg swayidle swaylock-effects waybar xorg-xwayland clipman archlinux-wallpaper ttf-font-awesome grimshot cantarell-fonts tofi gammastep gnome-system-monitor
+    
+9.  Copy config files
+
+10. Install further stuff (ghcup, vscode, chrome, PragmataPro font, etc)
+
+  	 paru -S google-chrome 
+ 
+11. Install epiphany browser:
+
+	 paru -S epiphany gst-plugins-good gst-libav

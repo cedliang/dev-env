@@ -1,0 +1,17 @@
+1. sudo pacman -S seahorse gnome-keyring
+2. Find the gnome-keyring-daemon.service file in /usr/lib/systemd/user
+3. Copy this file over to /etc/systemd/user
+4. Add 'ssh' to the components section
+5. For your Display Manager (eg, ly), edit the file /etc/pam.d/ly
+	Add the lines
+
+	auth optional pam_gnome_keyring.so
+
+	session optional pam_gnome_keyring.so auto_start
+	
+6. Add
+
+	export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
+
+   to .zshrc if not already there
+7. Open seahorse, create a new keychain called 'Login' and set it as default.

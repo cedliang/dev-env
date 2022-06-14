@@ -1,0 +1,8 @@
+paru -S sddm sddm-elegant-theme-git qt5-graphicaleffects
+
+then place the image in /usr/share/sddm/themes/Elegant/background.jpg
+
+Finally, edit /etc/sddm.conf to have the entry
+
+[Theme]
+Current=Elegant

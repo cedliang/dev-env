@@ -1,0 +1,9 @@
+{
+    "autosu": true,
+    "colorscheme": "custom-default",
+    "diffgutter": true,
+    "savecursor": true,
+    "saveundo": true,
+    "scrollbar": true,
+    "mkparents": true
+}

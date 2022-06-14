@@ -1,0 +1,159 @@
+// =============================================================================
+//
+// Waybar configuration
+//
+// Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+//
+// =============================================================================
+
+{
+  // -------------------------------------------------------------------------
+  // Global configuration
+  // -------------------------------------------------------------------------
+
+  "layer": "top",
+
+  "position": "top",
+
+  // If height property would be not present, it'd be calculated dynamically
+  "height": 30,
+
+  "modules-left": ["wlr/workspaces"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": [
+    "network",
+    "memory",
+    "cpu",
+    "temperature",
+    "pulseaudio",
+    "battery",
+    "tray",
+    "clock#date",
+    "clock#time"
+  ],
+
+  // -------------------------------------------------------------------------
+  // Modules
+  // -------------------------------------------------------------------------
+
+  "battery": {
+    "interval": 10,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    // Connected to AC
+    "format": "  {icon}  {capacity}%", // Icon: bolt
+    // Not connected to AC
+    "format-discharging": "{icon}  {capacity}%",
+    "format-icons": [
+      "", // Icon: battery-full
+      "", // Icon: battery-three-quarters
+      "", // Icon: battery-half
+      "", // Icon: battery-quarter
+      "" // Icon: battery-empty
+    ],
+    "tooltip": true
+  },
+
+  "clock#time": {
+    "interval": 1,
+    "format": "{:%H:%M:%S}",
+    "tooltip": false
+  },
+
+  "clock#date": {
+    "interval": 10,
+    "format": "  {:%e %b %Y}", // Icon: calendar-alt
+    "tooltip-format": "{:%e %B %Y}"
+  },
+
+  "cpu": {
+    "interval": 5,
+    "format": "  {usage}% ({load})", // Icon: microchip
+    "states": {
+      "warning": 70,
+      "critical": 90
+    },
+    "on-click": "gnome-system-monitor"
+  },
+
+  "memory": {
+    "interval": 5,
+   	"format": "  {used:0.1f}G/{total:0.1f}G ({percentage}%)",
+    "states": {
+      "warning": 70,
+      "critical": 90
+    },
+    "on-click": "gnome-system-monitor"
+  },
+
+  "network": {
+    "interval": 5,
+    "format-wifi": "  {essid} ({signalStrength}%)", // Icon: wifi
+    "format-ethernet": "  {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
+    "format-disconnected": "⚠  Disconnected",
+    "tooltip-format": "{ifname}: {ipaddr}",
+    "on-click": "nm-connection-editor"
+  },
+
+  "hyprland/window": {
+    "format": "{}"
+  },
+
+  "wlr/workspaces": {
+    "all-outputs": false,
+    "disable-scroll": true,
+    "on-click": "activate",
+    "format": "{icon}",
+	"format-icons": {
+		"1": "1️⃣",
+		"2": "2️⃣",
+		"3": "3️⃣",
+		"4": "4️⃣",
+		"5": "5️⃣",
+		"6": "6️⃣",
+		"7": "7️⃣",
+		"8": "8️⃣",
+		"9": "9️⃣",
+		"10": "🔟",
+	}
+  },
+
+  "pulseaudio": {
+    //"scroll-step": 1,
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "{icon}  {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "headphones": "",
+      "handsfree": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
+    },
+    "on-click": "pavucontrol"
+  },
+
+  "temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    "interval": 5,
+    "format": "{icon}  {temperatureC}°C",
+    "format-icons": [
+      "", // Icon: temperature-empty
+      "", // Icon: temperature-quarter
+      "", // Icon: temperature-half
+      "", // Icon: temperature-three-quarters
+      "" // Icon: temperature-full
+    ],
+    "tooltip": true
+  },
+
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
+  }
+}

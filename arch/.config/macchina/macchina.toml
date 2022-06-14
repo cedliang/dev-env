@@ -1,0 +1,6 @@
+# Lengthen uptime output
+long_uptime = true
+
+theme = "CustomBeryllium" 
+
+physical_cores = true

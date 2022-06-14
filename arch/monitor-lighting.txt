@@ -1,0 +1,42 @@
+For a laptop, paru -S light
+
+	sudo chmod +s /usr/bin/light
+
+Increase brightness:
+	light -A 6 && notify-send "Brightness: $(light -G)
+
+Decrease brightness:
+	light -U 6 && notify-send "Brightness: $(light -G)
+
+
+
+	
+
+For a desktop with a hardware monitor, 
+
+	paru -S ddcutil
+	sudo usermod -aG i2c ced
+	
+	then reboot
+
+Buttons are 
+
+XF86MonBrightnessUp
+XF86MonBrightnessDown
+
+
+Ddcutil commands:
+
+Increase brightness by 7:
+	ddcutil setvcp 10 + 7
+
+Decrease brightness by 5:
+	ddcutil setvcp 10 - 5
+
+Set brightness to 93:
+	ddcutil setvcp 10 93
+
+Set contrast to 75:
+	ddcutil setvcp 12 75
+
+	

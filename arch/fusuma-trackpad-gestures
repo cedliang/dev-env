@@ -1,0 +1,7 @@
+1. Install paru -S ruby-fusuma ruby-fusuma-plugin-sendkey
+2. Make sure config file is in ~/.config/fusuma
+3. Uncomment the reload_fusuma script from sway config
+4. Run 
+    sudo gpasswd -a $USER input
+    newgrp input
+

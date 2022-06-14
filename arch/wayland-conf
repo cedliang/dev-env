@@ -1,0 +1,20 @@
+If using GNOME, add tray icons with
+
+- Install the AUR package gnome-browser-connector
+- Install the GNOME extension at https://extensions.gnome.org/extension/615/appindicator-support/
+
+You may need to enable Wayland in some of your apps.
+
+Firefox:
+- Create ~/.config/environment.d/envvars.conf
+- Place in it the line
+  MOZ_ENABLE_WAYLAND=1 firefox
+ 
+VSCode:
+- Place in ~/.config/code-flags.conf the lines
+  --enable-features=UseOzonePlatform,WaylandWindowDecorations
+  --ozone-platform=wayland
+
+Discord:
+- Copy /usr/share/applications/discord.desktop to ~/.local/share/applications
+- Append the above flags to the Exec line

@@ -1,0 +1,27 @@
+# Beryllium
+
+spacing         = 3
+hide_ascii      = false
+separator       = ""
+key_color 		= "#1A7AAA"
+
+[box]
+border          = "rounded"
+visible         = true
+
+[palette]
+glyph           = "●  "
+visible         = true
+
+[bar]
+glyph           = "●"
+hide_delimiters = true
+visible         = true
+
+[box.inner_margin]
+x               = 2
+y               = 1
+
+[custom_ascii]
+color           = "#1A7AAA"
+path 			= "~/.config/macchina/themes/arch.txt"
