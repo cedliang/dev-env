@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo apt install fd-find fzf fonts-firacode htop keychain openssh-client openssh-server tmux bat git
+sudo apt install fd-find fzf fonts-firacode htop keychain openssh-client openssh-server tmux bat git build-essential
 
 mkdir -p ~/.local/bin
 
