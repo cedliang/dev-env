@@ -14,3 +14,6 @@ echo 'export PATH="~/.local/bin:$PATH"' >> ~/.bashrc
 
 ln -s $(which batcat) ~/.local/bin/bat
 ln -s $(which fdfind) ~/.local/bin/fd
+
+sudo systemctl start sshd.service
+sudo systemctl enable ssh.service
