@@ -21,8 +21,8 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-eval $(keychain --eval id_rsa)
-eval $(keychain --eval id_ecdsa)
+eval $(keychain --eval id_rsa > /dev/null 2>&1)
+eval $(keychain --eval id_ecdsa > /dev/null 2>&1)
 
 export FZF_DEFAULT_COMMAND='fd'
 export FZF_DIRECTORIES_COMMAND='fd --type d'
@@ -35,3 +35,5 @@ source /usr/share/fzf/completion.zsh
 eval $(thefuck --alias)
 
 export PATH=$HOME/.local/bin:$PATH
+
+neofetch
