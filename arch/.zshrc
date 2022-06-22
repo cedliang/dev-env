@@ -21,8 +21,8 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-eval $(keychain --eval id_rsa > /dev/null 2>&1)
-eval $(keychain --eval id_ecdsa > /dev/null 2>&1)
+eval $(keychain -q --eval id_rsa)
+eval $(keychain -q --eval id_ecdsa)
 
 export FZF_DEFAULT_COMMAND='fd'
 export FZF_DIRECTORIES_COMMAND='fd --type d'
