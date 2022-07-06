@@ -2,7 +2,10 @@
 2. Use visudo to give wheel sudo privilege
 3. Run arch-setup.sh
 4. Edit /etc/pacman.conf to activate colour and parallel downloads
-5. Move .zshrc and .nanorc files into home
-6. Install further stuff (ghcup, vscode, chrome, PragmataPro font, etc)
+5. Disable wifi power management by writing to /etc/NetworkManager/NetworkManager.conf the following lines:    
+    [connection]
+    wifi.powersave = 2
+6. Move .zshrc and .nanorc files into home
+7. Install further stuff (ghcup, vscode, chrome, PragmataPro font, etc)
 
 note: if using a desktop env, to change the font in gnome-terminal, install (with pacman) dconf-editor, then /org/gnome/terminal/legacy/profiles:/
