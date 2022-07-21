@@ -1,5 +1,6 @@
 1. Install arch with the packages in arch-packages.txt
-2. Use visudo to give wheel sudo privilege
+2. Add user to /etc/sudoers.d/00_{username} with the line 
+    {user} ALL=(ALL) ALL 
 3. Run arch-setup.sh
 4. Edit /etc/pacman.conf to activate colour and parallel downloads
 5. Disable wifi power management by writing to /etc/NetworkManager/NetworkManager.conf the following lines:    
