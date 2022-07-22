@@ -1,7 +1,7 @@
 # Install the following packages for a clean arch install:
-firefox git openssh zsh bat fzf fd nano vi tmux neofetch powerline powerline-fonts thefuck keychain gnome-bluetooth
+firefox git openssh zsh bat fzf fd micro vi tmux neofetch powerline powerline-fonts thefuck keychain gnome-bluetooth
 
-firefox git openssh zsh bat fzf fd nano vi tmux neofetch powerline powerline-fonts thefuck keychain bluez bluez-utils
+firefox git openssh zsh bat fzf fd micro vi tmux neofetch powerline powerline-fonts thefuck keychain bluez bluez-utils
 
 # Optional install packages:
 docker docker-compose
