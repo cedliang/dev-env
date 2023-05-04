@@ -1,4 +1,6 @@
+Server = https://gsl-syd.mm.fcix.net/archlinux/$repo/os/$arch
 Server = https://mirror.aarnet.edu.au/pub/archlinux/$repo/os/$arch
+Server = https://ftp.iinet.net.au/pub/archlinux/$repo/os/$arch
 Server = http://archlinux.mirror.digitalpacific.com.au/$repo/os/$arch
 Server = https://archlinux.mirror.digitalpacific.com.au/$repo/os/$arch
 Server = https://sydney.mirror.pkgbuild.com/$repo/os/$arch
