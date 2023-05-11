@@ -4,8 +4,6 @@
 [alias]
 	branch-prune = !git fetch -p && git branch --v | grep \"\\[gone\\]\" | awk '{print $1}' | xargs git branch -D
     log-remote-diff = "!( export ORIGINHEAD=`git rev-parse origin/HEAD`; git log --graph --abbrev-commit --decorate --date=relative $ORIGINHEAD HEAD `git merge-base HEAD $ORIGINHEAD`^! )"
-	remote-branch-ref = rev-parse --abbrev-ref --symbolic-full-name @{u}
-	pf = push --force-with-lease --force-if-includes
 	reset-remote-head = !git fetch --all && git reset --hard `git remote-branch-ref`
 [core]
 	editor = micro
