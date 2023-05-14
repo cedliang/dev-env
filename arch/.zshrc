@@ -26,17 +26,12 @@ export FZF_ALT_C_COMMAND="$FZF_DIRECTORIES_COMMAND"
 # zstyle :omz:plugins:keychain agents ssh
 # zstyle :omz:plugins:keychain identities id_ed25519 id_ecdsa
 # zstyle :omz:plugins:keychain options --quiet
-# plugins=(git zsh-autosuggestions zsh-syntax-highlighting git-auto-fetch fzf thefuck copybuffer keychain aliases)
+# plugins=(git zsh-autosuggestions zsh-syntax-highlighting git-auto-fetch fzf thefuck copybuffer keychain aliases tmux)
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting git-auto-fetch fzf thefuck copybuffer aliases)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting git-auto-fetch fzf thefuck copybuffer aliases tmux)
 source $ZSH/oh-my-zsh.sh
 
 export PATH=$HOME/.local/bin:$PATH
 
 alias cat='bat -p --paging=never'
 alias rlf='readlink -f'
-
-alias ta='tmux -CC a -t'
-alias tl='tmux ls'
-alias ts='tmux -CC new -s'
-alias td='tmux detach'
