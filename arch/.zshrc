@@ -14,7 +14,8 @@ compinit
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="agnoster"
 # ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
 
 export FZF_DEFAULT_COMMAND='fd -H'
