@@ -25,9 +25,9 @@ export FZF_ALT_C_COMMAND="$FZF_DIRECTORIES_COMMAND"
 # zstyle :omz:plugins:keychain agents ssh
 # zstyle :omz:plugins:keychain identities id_ed25519 id_ecdsa
 # zstyle :omz:plugins:keychain options --quiet
-# plugins=(git zsh-autosuggestions zsh-syntax-highlighting git-auto-fetch fzf thefuck copybuffer keychain)
+# plugins=(git tmux zsh-autosuggestions zsh-syntax-highlighting git-auto-fetch fzf thefuck copybuffer keychain)
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting git-auto-fetch fzf thefuck copybuffer)
+plugins=(git tmux zsh-autosuggestions zsh-syntax-highlighting git-auto-fetch fzf thefuck copybuffer)
 source $ZSH/oh-my-zsh.sh
 
 export PATH=$HOME/.local/bin:$PATH
