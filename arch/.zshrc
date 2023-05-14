@@ -32,4 +32,5 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH=$HOME/.local/bin:$PATH
 
-alias cat="bat -p --paging=never"
+alias cat='bat -p --paging=never'
+alias rlf='readlink -f'
