@@ -7,6 +7,7 @@
 	reset-remote-head = !git fetch --all && git reset --hard `git remote-branch-ref`
 [core]
 	editor = micro
+	pager = bat --pager='less -FRX' -l=\"Git Log\" --style=\"numbers,grid\"
 [init]
 	defaultBranch = main
 [push]
