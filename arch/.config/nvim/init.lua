@@ -9,4 +9,9 @@ require("lspconfig").hls.setup({
 
 require("lspconfig").gopls.setup({
   cmd = { "/Users/ced/.go/bin/gopls" },
+  settings = {
+    gopls = {
+      semanticTokens = true,
+    },
+  },
 })
