@@ -145,12 +145,8 @@ require("lspconfig").gopls.setup({
 --     ["textDocument/publishDiagnostics"] = function(_, _, _, _) end,
 --   },
 -- })
--- require("lspconfig").omnisharp.setup({
+-- require("lspconfig").omnisharp_mono.setup({
 --   on_attach = on_attach_omnisharp,
---   cmd = {
---     "mono",
---     "/Users/ced/.vscode-insiders/extensions/ms-dotnettools.csharp-1.25.9-darwin-arm64/.omnisharp/1.39.6/omnisharp/OmniSharp.exe",
---   },
 --   handlers = {
 --     ["textDocument/definition"] = require("omnisharp_extended").handler,
 --   },
