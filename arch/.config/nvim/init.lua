@@ -148,7 +148,7 @@ require("lspconfig").gopls.setup({
 -- require("lspconfig").omnisharp.setup({
 --   on_attach = on_attach_omnisharp,
 --   cmd = {
---     "/usr/local/Cellar/mono/6.12.0.182/bin/mono",
+--     "mono",
 --     "/Users/ced/.vscode-insiders/extensions/ms-dotnettools.csharp-1.25.9-darwin-arm64/.omnisharp/1.39.6/omnisharp/OmniSharp.exe",
 --   },
 --   handlers = {
