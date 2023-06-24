@@ -13,7 +13,9 @@ return {
             },
             setup = {
                 clangd = function(_, opts)
-                    require("lspconfig").clangd.setup({})
+                    local capabilities = vim.lsp.protocol.make_client_capabilities()
+                    capabilities.offsetEncoding = { "utf-16" }
+                    require("lspconfig").clangd.setup({ capabilities = capabilities })
                     return true
                 end,
             },
