@@ -2,7 +2,7 @@ return {
     {
         "nvim-treesitter/nvim-treesitter",
         opts = function(_, opts)
-            table.insert(opts.ensure_installed, { "c_sharp", "yaml" })
+            table.insert(opts.ensure_installed, "c_sharp")
         end,
     },
     {
