@@ -16,8 +16,8 @@ export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 # ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-export FZF_DEFAULT_COMMAND='fd -H'
-export FZF_DIRECTORIES_COMMAND='fd -H --type d'
+export FZF_DEFAULT_COMMAND='fd -u'
+export FZF_DIRECTORIES_COMMAND='fd -u --type d'
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export FZF_ALT_C_COMMAND=$FZF_DIRECTORIES_COMMAND
 
