@@ -72,6 +72,7 @@ return {
                     local handler = require("omnisharp_extended").handler
                     require("lspconfig").omnisharp_mono.setup({
                         on_attach = function(client, _)
+                            vim.api.nvim_set_hl(0, "@lsp.type.keyword", {})
                             client.server_capabilities.semanticTokensProvider = {
                                 full = vim.empty_dict(),
                                 legend = {
