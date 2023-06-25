@@ -1,3 +1,5 @@
+local util = require("lspconfig.util")
+
 return {
     {
         "nvim-treesitter/nvim-treesitter",
@@ -13,8 +15,56 @@ return {
         opts = {
             servers = {
                 omnisharp_mono = {},
+                csharp_ls = {},
             },
             setup = {
+                csharp_ls = function(_, opts)
+                    require("lspconfig").csharp_ls.setup({
+                        on_attach = function(client, _)
+                            client.server_capabilities = {
+                                semanticTokensProvider = {
+                                    full = true,
+                                    legend = {
+                                        tokenModifiers = { "static" },
+                                        tokenTypes = {
+                                            "class",
+                                            "comment",
+                                            "property",
+                                            "enumMember",
+                                            "enum",
+                                            "event",
+                                            "method",
+                                            "variable",
+                                            "interface",
+                                            "keyword",
+                                            "namespace",
+                                            "number",
+                                            "operator",
+                                            "parameter",
+                                            "struct",
+                                            "regex",
+                                            "string",
+                                            "typeParameter",
+                                        },
+                                    },
+                                    range = true,
+                                },
+                                textDocumentSync = {
+                                    change = 2,
+                                    openClose = true,
+                                    save = {
+                                        includeText = true,
+                                    },
+                                },
+                            }
+                        end,
+                        handlers = {
+                            ["textDocument/publishDiagnostics"] = function(_, _, _, _) end,
+                        },
+                        root_dir = util.root_pattern("*.sln", ".git"),
+                    })
+                    return true
+                end,
                 omnisharp_mono = function(_, opts)
                     local handler = require("omnisharp_extended").handler
                     require("lspconfig").omnisharp_mono.setup({
