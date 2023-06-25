@@ -21,6 +21,9 @@ return {
                 csharp_ls = function(_, opts)
                     require("lspconfig").csharp_ls.setup({
                         on_attach = function(client, _)
+                            -- lsp keyword breaks since it designates too much as a keyword (ie, conditionals, etc)
+                            -- here we let it fallback to the default highlight groupvim.api.nvim_set_hl(0, "@lsp.type.keyword", {})
+                            vim.api.nvim_set_hl(0, "@lsp.type.keyword", {})
                             client.server_capabilities = {
                                 semanticTokensProvider = {
                                     full = true,
