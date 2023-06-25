@@ -61,6 +61,9 @@ vim.g.onedark_config = {
         ["@constant"] = { fg = palette.pink, style = "bold" },
         ["@definition.constant"] = { fg = palette.pink, style = "bold" },
         ["@constant.builtin"] = { fg = palette.pink },
+        ["@parameter.reference"] = { fg = palette.red },
+
+        -- ["@lsp.type.keyword"] = { fg = palette.magenta, fmt = "nocombine" },
     },
 }
 return {
