@@ -21,7 +21,7 @@ export FZF_DIRECTORIES_COMMAND='fd -u --type d'
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export FZF_ALT_C_COMMAND=$FZF_DIRECTORIES_COMMAND
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting git-auto-fetch fzf thefuck copybuffer aliases tmux cp)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting git-auto-fetch fzf copybuffer aliases tmux cp)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -65,6 +65,8 @@ export GOPATH=$HOME/.go
 ssh-add --apple-load-keychain > /dev/null 2>&1
 
 test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
+
+eval $(thefuck --alias)
 
 ############################# CLEANUP ##############################
 
