@@ -72,6 +72,12 @@ return {
                     local handler = require("omnisharp_extended").handler
                     require("lspconfig").omnisharp_mono.setup({
                         on_attach = function(client, _)
+                            local keys = require("lazyvim.plugins.lsp.keymaps").get()
+                            keys[#keys + 1] = {
+                                "gd",
+                                "<cmd>lua require('omnisharp_extended').telescope_lsp_definitions()<cr>",
+                                desc = "Goto Definition (omnisharp)",
+                            }
                             vim.api.nvim_set_hl(0, "@lsp.type.keyword", {})
                             client.server_capabilities.semanticTokensProvider = {
                                 full = vim.empty_dict(),
