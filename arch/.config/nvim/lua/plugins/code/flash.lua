@@ -2,25 +2,19 @@ return {
     "folke/flash.nvim",
     ---@type Flash.Config
     opts = {
+        config = function(_)
+            vim.api.nvim_set_hl(0, "FlashLabel", { fg = "#39480c", bg = "#bef129", bold = true })
+        end,
         modes = {
             char = {
-                -- config = function(opts)
-                --     -- autohide flash when in operator-pending mode
-                --     opts.autohide = vim.fn.mode(true):find("no") and vim.v.operator == "y"
-                --
-                --     -- disable jump labels when enabled and when using a count
-                --     opts.jump_labels = opts.jump_labels and vim.v.count == 0
-                --
-                --     -- disable jump labels in operator-pending mode
-                --     -- opts.jump_labels = not (vim.fn.mode(true):find("no"))
-                -- end,
                 jump_labels = true,
                 highlight = { backdrop = false },
+                autohide = true,
+            },
+            treesitter_search = {
+                label = { rainbow = { enabled = true } },
+                remote_op = { motion = true },
             },
         },
-    },
-    -- stylua: ignore
-    keys = {
-        { "R", mode = { "o", "x" }, function() require("flash").treesitter_search({ remote_op = { motion = true } }) end, desc = "Treesitter Search" },
     },
 }
