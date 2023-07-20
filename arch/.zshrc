@@ -29,6 +29,7 @@ zstyle ':completion:*:git-checkout:*' sort false
 zstyle ':completion:*:descriptions' format '[%d]'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
+zstyle ':fzf-tab:*' switch-group ',' '.'
 
 # zstyle :omz:plugins:keychain agents ssh
 # zstyle :omz:plugins:keychain identities id_ed25519 id_ecdsa
