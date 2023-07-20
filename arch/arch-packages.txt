@@ -1,4 +1,4 @@
 # Install the following packages for a clean arch install:
-linux-headers firefox git croc openssh zsh bat fzf fd micro neovim vim vi tmux neofetch powerline powerline-fonts thefuck bluez bluez-utils pavucontrol nm-connection-editor blueberry gnome-keyring seahorse ttf-jetbrains-mono ttf-ubuntu-font-family
+linux-headers firefox git croc openssh zsh bat fzf fd exa micro neovim vim vi tmux neofetch powerline powerline-fonts thefuck bluez bluez-utils pavucontrol nm-connection-editor blueberry gnome-keyring seahorse ttf-jetbrains-mono ttf-ubuntu-font-family
 
 Use keychain instead of gnome-keyring and seahorse if doing a headless install.
