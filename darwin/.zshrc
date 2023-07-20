@@ -36,6 +36,8 @@ alias pip3=pip3.11
 alias python=python3.11
 alias python3=python3.11
 
+alias gswi='git switch $(git branch | fzf)'
+
 ############################# PATH #################################
 
 path=(/opt/homebrew/opt/python@3.11/bin $path)
