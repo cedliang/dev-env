@@ -2,6 +2,7 @@ return {
     "folke/flash.nvim",
     ---@type Flash.Config
     opts = {
+        labels = "sfhjklqetuopzvnm",
         modes = {
             char = {
                 jump_labels = true,
