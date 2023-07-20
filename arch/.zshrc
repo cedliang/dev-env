@@ -39,6 +39,8 @@ source $ZSH/oh-my-zsh.sh
 alias cat='bat -p --paging=never'
 alias rlf='readlink -f'
 
+alias gswi='git switch $(git branch | fzf)'
+
 ############################# PATH #################################
 
 path=($HOME/.local/bin $path)
