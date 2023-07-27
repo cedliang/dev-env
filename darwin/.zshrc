@@ -37,11 +37,6 @@ alias cat='bat -p --paging=never'
 alias rlf='readlink -f'
 alias brow='arch -x86_64 /usr/local/Homebrew/bin/brew'
 
-alias pip=pip3.11
-alias pip3=pip3.11
-alias python=python3.11
-alias python3=python3.11
-
 alias gswi='git switch $(git branch | fzf)'
 
 ############################# PATH #################################
@@ -58,7 +53,7 @@ export PATH
 ############################# DEV ##################################
 
 # Python
-CERT_PATH=$(python3.11 -m certifi)
+CERT_PATH=$(python3 -m certifi)
 export SSL_CERT_FILE=${CERT_PATH}
 export REQUESTS_CA_BUNDLE=${CERT_PATH}
 

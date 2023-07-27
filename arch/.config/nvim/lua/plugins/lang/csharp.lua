@@ -64,7 +64,9 @@ return {
                         handlers = {
                             ["textDocument/publishDiagnostics"] = function(_, _, _, _) end,
                         },
-                        root_dir = util.root_pattern("*.sln", ".git"),
+                        root_dir = function(fname)
+                            return util.root_pattern("*.sln")(fname) or util.root_pattern("*.csproj")(fname)
+                        end,
                     })
                     return true
                 end,
@@ -157,6 +159,9 @@ return {
                         handlers = {
                             ["textDocument/definition"] = handler,
                         },
+                        root_dir = function(fname)
+                            return util.root_pattern("*.sln")(fname) or util.root_pattern("*.csproj")(fname)
+                        end,
                         enable_ms_build_load_projects_on_demand = true,
                         enable_roslyn_analyzers = true,
                         organize_imports_on_format = true,
