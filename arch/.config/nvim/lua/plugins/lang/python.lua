@@ -8,13 +8,15 @@ return {
     {
         "williamboman/mason.nvim",
         opts = function(_, opts)
-            table.insert(opts.ensure_installed, "yapf")
+            -- table.insert(opts.ensure_installed, "yapf")
+            table.insert(opts.ensure_installed, "black")
         end,
     },
     {
         "jose-elias-alvarez/null-ls.nvim",
         opts = function(_, opts)
-            table.insert(opts.sources, require("null-ls").builtins.formatting.yapf)
+            -- table.insert(opts.sources, require("null-ls").builtins.formatting.yapf)
+            table.insert(opts.sources, require("null-ls").builtins.formatting.black)
         end,
     },
     {
@@ -22,6 +24,18 @@ return {
         opts = {
             servers = {
                 pyright = {},
+            },
+            setup = {
+                pyright = function(_, opts)
+                    require("lspconfig").pyright.setup({
+                        settings = {
+                            pyright = {
+                                typeCheckingMode = "strict",
+                            },
+                        },
+                    })
+                    return true
+                end,
             },
         },
     },
