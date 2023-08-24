@@ -1,3 +1,5 @@
+vim.keymap.set("n", "dm<space>", "<cmd>delm!<CR>", { desc = "Delete markers" })
+
 return {
     {
         "chentoast/marks.nvim",
@@ -6,6 +8,7 @@ return {
             require("marks").setup({
                 mappings = {
                     annotate = "<leader>ma",
+                    delete_buf = "false",
                 },
             })
         end,
