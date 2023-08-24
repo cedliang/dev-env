@@ -6,6 +6,7 @@ return {
         event = "BufReadPre",
         config = function()
             require("marks").setup({
+                force_write_shada = true,
                 mappings = {
                     annotate = "<leader>ma",
                     delete_buf = "false",
