@@ -1,7 +1,3 @@
-############################# STARTUP ##############################
-
-# macchina
-
 ############################# OH MY ZSH ############################
 
 HISTFILE=~/.histfile
@@ -34,9 +30,9 @@ zstyle ':fzf-tab:*' switch-group ',' '.'
 # zstyle :omz:plugins:keychain agents ssh
 # zstyle :omz:plugins:keychain identities id_ed25519 id_ecdsa
 # zstyle :omz:plugins:keychain options --quiet
-# plugins=(git fzf-tab zsh-autosuggestions zsh-syntax-highlighting git-auto-fetch fzf thefuck copybuffer keychain aliases tmux cp)
+# plugins=(git fzf-tab zsh-autosuggestions zsh-syntax-highlighting git-auto-fetch fzf thefuck copybuffer keychain aliases tmux cp extract)
 
-plugins=(git fzf-tab zsh-autosuggestions zsh-syntax-highlighting git-auto-fetch fzf copybuffer aliases tmux cp)
+plugins=(git fzf-tab zsh-autosuggestions zsh-syntax-highlighting git-auto-fetch fzf copybuffer aliases tmux cp extract)
 
 source $ZSH/oh-my-zsh.sh
 
