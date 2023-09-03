@@ -30,9 +30,9 @@ zstyle ':fzf-tab:*' switch-group ',' '.'
 # zstyle :omz:plugins:keychain agents ssh
 # zstyle :omz:plugins:keychain identities id_ed25519 id_ecdsa
 # zstyle :omz:plugins:keychain options --quiet
-# plugins=(git fzf-tab zsh-autosuggestions zsh-syntax-highlighting git-auto-fetch fzf thefuck copybuffer keychain aliases tmux cp extract)
+# plugins=(git fzf-tab zsh-autosuggestions zsh-syntax-highlighting git-auto-fetch fzf thefuck copybuffer keychain aliases tmux cp extract fancy-ctrl-z)
 
-plugins=(git fzf-tab zsh-autosuggestions zsh-syntax-highlighting git-auto-fetch fzf copybuffer aliases tmux cp extract)
+plugins=(git fzf-tab zsh-autosuggestions zsh-syntax-highlighting git-auto-fetch fzf copybuffer aliases tmux cp extract fancy-ctrl-z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -40,8 +40,6 @@ source $ZSH/oh-my-zsh.sh
 
 alias cat='bat -p --paging=never'
 alias rlf='readlink -f'
-
-alias gswi='git switch $(git branch | fzf)'
 
 ############################# PATH #################################
 

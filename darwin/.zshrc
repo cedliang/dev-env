@@ -1,7 +1,5 @@
 ############################# STARTUP ##############################
 
-# macchina
-
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -27,7 +25,7 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 zstyle ':fzf-tab:*' switch-group ',' '.'
 
-plugins=(git fzf-tab zsh-autosuggestions zsh-syntax-highlighting git-auto-fetch fzf copybuffer aliases tmux cp)
+plugins=(git fzf-tab zsh-autosuggestions zsh-syntax-highlighting git-auto-fetch fzf copybuffer aliases tmux cp extract fancy-ctrl-z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -37,12 +35,10 @@ alias cat='bat -p --paging=never'
 alias rlf='readlink -f'
 alias brow='arch -x86_64 /usr/local/Homebrew/bin/brew'
 
-alias gswi='git switch $(git branch | fzf)'
-
 ############################# PATH #################################
 
 path=(/opt/homebrew/opt/python@3.11/bin $path)
-path=($HOME/Library/Python/3.11/bin $path)
+# path=($HOME/Library/Python/3.11/bin $path)
 
 path=(/opt/homebrew/bin $path)
 
