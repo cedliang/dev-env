@@ -41,6 +41,12 @@ source $ZSH/oh-my-zsh.sh
 alias cat='bat -p --paging=never'
 alias rlf='readlink -f'
 
+# rsync -avhzP
+alias rcp='rsync --archive --verbose --human-readable --compress --partial --progress'
+alias rmv='rsync --archive --verbose --human-readable --compress --partial --progress --remove-source-files'
+alias rup='rsync --archive --verbose --human-readable --compress --partial --progress --update'
+alias rsy='rsync --archive --verbose --human-readable --compress --partial --progress --update --del'
+
 ############################# PATH #################################
 
 path=($HOME/.local/bin $path)
