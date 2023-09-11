@@ -4,9 +4,9 @@ return {
     opts = {
         labels = "sfhjklqetuopzvnm",
         modes = {
-            -- search = {
-            --     enabled = false,
-            -- },
+            search = {
+                enabled = false,
+            },
             char = {
                 jump_labels = true,
                 highlight = { backdrop = false },
