@@ -13,7 +13,7 @@ return {
         end,
     },
     {
-        "jose-elias-alvarez/null-ls.nvim",
+        "nvimtools/none-ls.nvim",
         opts = function(_, opts)
             -- table.insert(opts.sources, require("null-ls").builtins.formatting.yapf)
             table.insert(opts.sources, require("null-ls").builtins.formatting.black)
