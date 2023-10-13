@@ -8,16 +8,16 @@ return {
     {
         "williamboman/mason.nvim",
         opts = function(_, opts)
-            -- table.insert(opts.ensure_installed, "yapf")
             table.insert(opts.ensure_installed, "black")
         end,
     },
     {
-        "nvimtools/none-ls.nvim",
-        opts = function(_, opts)
-            -- table.insert(opts.sources, require("null-ls").builtins.formatting.yapf)
-            table.insert(opts.sources, require("null-ls").builtins.formatting.black)
-        end,
+        "stevearc/conform.nvim",
+        opts = {
+            formatters_by_ft = {
+                python = { "black" },
+            },
+        },
     },
     {
         "neovim/nvim-lspconfig",
