@@ -38,7 +38,7 @@ source $ZSH/oh-my-zsh.sh
 
 ############################# ALIASES ##############################
 
-alias cat='bat -p --paging=never'
+alias cat='bat -pP'
 alias rlf='readlink -f'
 
 # rsync -avhzP
