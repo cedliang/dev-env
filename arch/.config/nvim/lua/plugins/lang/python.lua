@@ -9,6 +9,7 @@ return {
         "williamboman/mason.nvim",
         opts = function(_, opts)
             table.insert(opts.ensure_installed, "black")
+            -- table.insert(opts.ensure_installed, "mypy")
         end,
     },
     {
@@ -19,6 +20,14 @@ return {
             },
         },
     },
+    -- {
+    --     "mfussenegger/nvim-lint",
+    --     opts = {
+    --         linters_by_ft = {
+    --             python = { "mypy" },
+    --         },
+    --     },
+    -- },
     {
         "neovim/nvim-lspconfig",
         opts = {
