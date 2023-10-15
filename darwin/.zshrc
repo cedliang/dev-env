@@ -9,13 +9,14 @@ fi
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 
-# ZSH_THEME="agnoster"
-# DEFAULT_USER=ced
-# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-export FZF_DEFAULT_COMMAND='fd -u'
-export FZF_DIRECTORIES_COMMAND='fd -u --type d'
+# export FZF_DEFAULT_COMMAND='fd -u'
+# export FZF_DIRECTORIES_COMMAND='fd -u --type d'
+
+export FZF_DEFAULT_COMMAND="fd -u . -E 'Library*'"
+export FZF_DIRECTORIES_COMMAND="fd -u --type d . -E 'Library*'"
+
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export FZF_ALT_C_COMMAND=$FZF_DIRECTORIES_COMMAND
 
@@ -34,12 +35,15 @@ source $ZSH/oh-my-zsh.sh
 alias cat='bat -pP'
 alias rlf='readlink -f'
 alias brow='arch -x86_64 /usr/local/Homebrew/bin/brew'
+alias ls='eza'
 
-# rsync -avhzP
-alias rcp='rsync --archive --verbose --human-readable --compress --partial --progress'
-alias rmv='rsync --archive --verbose --human-readable --compress --partial --progress --remove-source-files'
-alias rup='rsync --archive --verbose --human-readable --compress --partial --progress --update'
-alias rsy='rsync --archive --verbose --human-readable --compress --partial --progress --update --del'
+alias rcp='rsync -avhzP'
+alias rmv='rsync -avhzP --remove-source-files'
+alias rup='rsync -avhzPu'
+alias rsy='rsync -avhzPu --del'
+
+# create pull request with bitbucket push
+alias gpcpr='git push 2>&1 | grep https | awk '\''{print $2}'\'' | xargs open'
 
 ############################# PATH #################################
 
