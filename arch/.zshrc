@@ -12,8 +12,6 @@ compinit
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 
-# ZSH_THEME="agnoster"
-# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=23'
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 export FZF_DEFAULT_COMMAND='fd -u'
@@ -41,11 +39,10 @@ source $ZSH/oh-my-zsh.sh
 alias cat='bat -pP'
 alias rlf='readlink -f'
 
-# rsync -avhzP
-alias rcp='rsync --archive --verbose --human-readable --compress --partial --progress'
-alias rmv='rsync --archive --verbose --human-readable --compress --partial --progress --remove-source-files'
-alias rup='rsync --archive --verbose --human-readable --compress --partial --progress --update'
-alias rsy='rsync --archive --verbose --human-readable --compress --partial --progress --update --del'
+alias rcp='rsync -avhzP'
+alias rmv='rsync -avhzP --remove-source-files'
+alias rup='rsync -avhzPu'
+alias rsy='rsync -avhzPu --del'
 
 ############################# PATH #################################
 
