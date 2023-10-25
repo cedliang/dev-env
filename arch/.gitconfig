@@ -21,3 +21,6 @@
 	defaultBranch = main
 [push]
 	autoSetupRemote = true
+[feature]
+    experimental = true
+    manyFiles = true
