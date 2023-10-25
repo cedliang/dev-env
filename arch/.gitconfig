@@ -15,6 +15,7 @@
     thresholdForParallelism = 1
 [fetch]
     parallel = 0
+    prune = true
 [submodule]
     fetchJobs = 0
 [init]
