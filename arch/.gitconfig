@@ -25,3 +25,5 @@
 	autoSetupRemote = true
 [feature]
     experimental = true
+[index]
+    version = 4
