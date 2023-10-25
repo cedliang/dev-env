@@ -10,6 +10,7 @@
 	editor = nvim
 	fsmonitor = true
 	pager = bat --style=\"grid\"
+    untrackedCache = true
 [checkout]
     workers = 0
     thresholdForParallelism = 1
@@ -24,4 +25,3 @@
 	autoSetupRemote = true
 [feature]
     experimental = true
-    manyFiles = true
