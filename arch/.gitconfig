@@ -2,12 +2,21 @@
 	email = me@cedric.app
 	name = cedliang
 [alias]
+    remote-branch-ref = rev-parse --abbrev-ref --symbolic-full-name @{u}
 	branch-prune = !git fetch -p && git branch --v | grep \"\\[gone\\]\" | awk '{print $1}' | xargs git branch -D
     log-remote-diff = "!( export ORIGINHEAD=`git rev-parse origin/HEAD`; git log --graph --abbrev-commit --decorate --date=relative $ORIGINHEAD HEAD `git merge-base HEAD $ORIGINHEAD`^! )"
 	reset-remote-head = !git fetch --all && git reset --hard `git remote-branch-ref`
 [core]
-	editor = micro
+	editor = nvim
+	fsmonitor = true
 	pager = bat --style=\"grid\"
+[checkout]
+    workers = 0
+    thresholdForParallelism = 1
+[fetch]
+    parallel = 0
+[submodule]
+    fetchJobs = 0
 [init]
 	defaultBranch = main
 [push]
