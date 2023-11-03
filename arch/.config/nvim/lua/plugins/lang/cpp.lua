@@ -16,7 +16,7 @@ return {
                     cmd = {
                         "clangd",
                         "--background-index",
-                        "--clang-tidy=0",
+                        "--clang-tidy",
                         "--header-insertion=iwyu",
                         "--completion-style=detailed",
                         "--function-arg-placeholders",
