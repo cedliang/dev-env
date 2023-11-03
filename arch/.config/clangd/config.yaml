@@ -1,0 +1,5 @@
+CompileFlags:
+  Remove: -fext-numeric-literals
+Diagnostics:
+  ClangTidy:
+    Remove: bugprone-unchecked-optional-access
