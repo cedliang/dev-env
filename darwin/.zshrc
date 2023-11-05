@@ -68,6 +68,9 @@ export REQUESTS_CA_BUNDLE=${CERT_PATH}
 # Go
 export GOPATH=$HOME/.go
 
+# .NET
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
 ############################# MISC #################################
 
 ssh-add --apple-load-keychain > /dev/null 2>&1
