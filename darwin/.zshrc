@@ -34,7 +34,6 @@ source $ZSH/oh-my-zsh.sh
 
 alias cat='bat -pP'
 alias rlf='readlink -f'
-alias brow='arch -x86_64 /usr/local/Homebrew/bin/brew'
 alias ls='eza'
 
 alias rcp='rsync -avhzP'
