@@ -20,10 +20,10 @@ export FZF_DIRECTORIES_COMMAND="fd -u --type d . -E 'Library*'"
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export FZF_ALT_C_COMMAND=$FZF_DIRECTORIES_COMMAND
 
-export FZF_ALT_C_OPTS="--preview 'tree -L 1 -C {}' --info=right --border --preview-window=border-rounded --margin=2 --scrollbar=▌▐ --separator=━"
-export FZF_CTRL_R_OPTS="--border --margin=2 --scrollbar=▌▐ --separator=━"
-export FZF_CTRL_T_OPTS="--preview '[ -d {} ] && tree -L 1 -C {} || ([ -f {} ] && bat -n --color=always {})' --info=right --border --preview-window=border-rounded --margin=2 --scrollbar=▌▐ --separator=━"
-export FZF_COMPLETION_OPTS="--preview '[ -d {} ] && tree -L 1 -C {} || ([ -f {} ] && bat -n --color=always {})' --info=right --border --preview-window=border-rounded --margin=2 --scrollbar=▌▐ --separator=━"
+export FZF_ALT_C_OPTS="--preview 'tree -L 1 -C {}' --info=right --border --preview-window=border-rounded --margin=1 --scrollbar=▌▐ --separator=━"
+export FZF_CTRL_R_OPTS="--border --margin=1 --scrollbar=▌▐ --separator=━"
+export FZF_CTRL_T_OPTS="--preview '[ -d {} ] && tree -L 1 -C {} || ([ -f {} ] && bat -n --color=always {})' --info=right --border --preview-window=border-rounded --margin=1 --scrollbar=▌▐ --separator=━"
+export FZF_COMPLETION_OPTS="--preview '[ -d {} ] && tree -L 1 -C {} || ([ -f {} ] && bat -n --color=always {})' --info=right --border --preview-window=border-rounded --margin=1 --scrollbar=▌▐ --separator=━"
 
 zstyle ':completion:*:git-checkout:*' sort false
 zstyle ':completion:*:descriptions' format '[%d]'
