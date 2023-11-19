@@ -11,6 +11,13 @@ local csharp_ls_func
 local use_mono = true
 
 local function return_main(mono)
+    vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+        group = vim.api.nvim_create_augroup("file_type", { clear = true }),
+        pattern = { "*.xaml" },
+        callback = function()
+            vim.bo.filetype = "xml"
+        end,
+    })
     return {
         {
             "nvim-treesitter/nvim-treesitter",
