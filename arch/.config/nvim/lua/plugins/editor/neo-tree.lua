@@ -26,6 +26,9 @@ return {
             filesystem = {
                 bind_to_cwd = true,
             },
+            document_symbols = {
+                follow_cursor = true,
+            },
         },
     },
 }
