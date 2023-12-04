@@ -17,6 +17,7 @@ return {
             },
             window = {
                 mappings = {
+                    ["h"] = "toggle_hidden",
                     ["<"] = "close_node",
                     [">"] = "toggle_node",
                     ["H"] = "prev_source",
