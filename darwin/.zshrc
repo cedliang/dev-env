@@ -35,7 +35,23 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 zstyle ':fzf-tab:*' fzf-pad 6
 zstyle ':fzf-tab:*' switch-group ',' '.'
 
-plugins=(git fzf-tab zsh-autosuggestions zsh-syntax-highlighting git-auto-fetch fzf copybuffer aliases tmux cp extract fancy-ctrl-z)
+bindkey '^ ' autosuggest-accept
+export EDITOR=nvim
+
+plugins=(
+    git
+    fzf-tab
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    git-auto-fetch
+    fzf
+    copybuffer
+    aliases
+    tmux
+    cp
+    extract
+    fancy-ctrl-z
+)
 
 source $ZSH/oh-my-zsh.sh
 
