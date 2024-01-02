@@ -1,6 +1,3 @@
-local util = require("lspconfig.util")
-
-local root_dir_func
 local csharp_ls_on_attach_func
 local omnisharp_on_attach_func
 local omnisharp_on_new_config
@@ -51,10 +48,6 @@ local function return_main(mono)
             }),
         },
     }
-end
-
-root_dir_func = function(fname)
-    return util.root_pattern("*.sln")(fname) or util.root_pattern("*.csproj")(fname)
 end
 
 csharp_ls_on_attach_func = function(client, _)
@@ -162,7 +155,6 @@ omnisharp_mono_func = function(_, opts)
         handlers = {
             ["textDocument/definition"] = handler,
         },
-        root_dir = root_dir_func,
         on_new_config = omnisharp_on_new_config,
         enable_ms_build_load_projects_on_demand = true,
         enable_roslyn_analyzers = true,
@@ -180,7 +172,6 @@ omnisharp_func = function(_, opts)
         handlers = {
             ["textDocument/definition"] = handler,
         },
-        root_dir = root_dir_func,
         on_new_config = omnisharp_on_new_config,
         enable_ms_build_load_projects_on_demand = true,
         enable_roslyn_analyzers = true,
@@ -197,7 +188,6 @@ csharp_ls_func = function(_, opts)
         handlers = {
             ["textDocument/publishDiagnostics"] = function(_, _, _, _) end,
         },
-        root_dir = root_dir_func,
     })
     return true
 end
