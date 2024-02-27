@@ -17,15 +17,16 @@ return {
             },
             window = {
                 mappings = {
-                    ["h"] = "toggle_hidden",
                     ["<"] = "close_node",
                     [">"] = "toggle_node",
                     ["H"] = "prev_source",
                     ["L"] = "next_source",
+                    -- ["Z"] = "expand_all_nodes",
                 },
             },
             filesystem = {
                 bind_to_cwd = true,
+                window = { mappings = { ["h"] = "toggle_hidden" } },
             },
             document_symbols = {
                 follow_cursor = true,
