@@ -35,6 +35,8 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 zstyle ':fzf-tab:*' fzf-pad 6
 zstyle ':fzf-tab:*' switch-group ',' '.'
 
+zstyle ':omz:update' mode auto
+
 bindkey '^ ' autosuggest-accept
 export EDITOR=nvim
 
