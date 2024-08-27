@@ -95,17 +95,38 @@ omnisharp_on_attach_func = function(client, _)
     local keys = require("lazyvim.plugins.lsp.keymaps").get()
     keys[#keys + 1] = {
         "gd",
-        "<cmd>lua require('omnisharp_extended').telescope_lsp_definitions()<cr>",
+        "<cmd>lua require('omnisharp_extended').telescope_lsp_definition()<cr>",
         desc = "Goto Definition (omnisharp)",
+    }
+    keys[#keys + 1] = {
+        "gr",
+        "<cmd>lua require('omnisharp_extended').telescope_lsp_references()<cr>",
+        desc = "Goto References (omnisharp)",
+    }
+    keys[#keys + 1] = {
+        "gI",
+        "<cmd>lua require('omnisharp_extended').telescope_lsp_implementation()<cr>",
+        desc = "Goto Implementations (omnisharp)",
+    }
+    keys[#keys + 1] = {
+        "gy",
+        "<cmd>lua require('omnisharp_extended').telescope_lsp_type_definition()<cr>",
+        desc = "Goto T[y]pe Definition (omnisharp)",
     }
 end
 
 omnisharp_mono_func = function(_, opts)
-    local handler = require("omnisharp_extended").handler
+    local def_handler = require("omnisharp_extended").definition_handler
+    local ref_handler = require("omnisharp_extended").references_handler
+    local impl_handler = require("omnisharp_extended").implementation_handler
+    local type_def_handler = require("omnisharp_extended").type_definition_handler
     require("lspconfig").omnisharp_mono.setup({
         on_attach = omnisharp_on_attach_func,
         handlers = {
-            ["textDocument/definition"] = handler,
+            ["textDocument/definition"] = def_handler,
+            ["textDocument/typeDefinition"] = type_def_handler,
+            ["textDocument/implementation"] = impl_handler,
+            ["textDocument/references"] = ref_handler,
         },
         settings = {
             FormattingOptions = {
@@ -127,11 +148,17 @@ omnisharp_mono_func = function(_, opts)
 end
 
 omnisharp_func = function(_, opts)
-    local handler = require("omnisharp_extended").handler
+    local def_handler = require("omnisharp_extended").definition_handler
+    local ref_handler = require("omnisharp_extended").references_handler
+    local impl_handler = require("omnisharp_extended").implementation_handler
+    local type_def_handler = require("omnisharp_extended").type_definition_handler
     require("lspconfig").omnisharp.setup({
         on_attach = omnisharp_on_attach_func,
         handlers = {
-            ["textDocument/definition"] = handler,
+            ["textDocument/definition"] = def_handler,
+            ["textDocument/typeDefinition"] = type_def_handler,
+            ["textDocument/implementation"] = impl_handler,
+            ["textDocument/references"] = ref_handler,
         },
         settings = {
             FormattingOptions = {
