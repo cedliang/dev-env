@@ -157,6 +157,9 @@ csharp_ls_func = function(_, opts)
         on_attach = csharp_ls_on_attach_func,
         handlers = {
             ["textDocument/publishDiagnostics"] = function(_, _, _, _) end,
+            ["client/registerCapability"] = function(_, _, _)
+                return vim.NIL
+            end,
         },
     })
     return true
