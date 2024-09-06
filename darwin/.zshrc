@@ -11,8 +11,10 @@ export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-export FZF_DEFAULT_COMMAND='fd -j4 -u'
-export FZF_DIRECTORIES_COMMAND='fd -j4 -u --type d'
+FZF_LSCOLORS='di=36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43'
+
+export FZF_DEFAULT_COMMAND="LS_COLORS='$FZF_LSCOLORS' fd -j4 -u --color=always -E 'OrbStack*' ."
+export FZF_DIRECTORIES_COMMAND="LS_COLORS='$FZF_LSCOLORS' fd -j4 -u --type d --color=always -E 'OrbStack*' ."
 
 # export FZF_DEFAULT_COMMAND="fd -u . -E 'Library*'"
 # export FZF_DIRECTORIES_COMMAND="fd -u --type d . -E 'Library*'"
@@ -20,7 +22,7 @@ export FZF_DIRECTORIES_COMMAND='fd -j4 -u --type d'
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export FZF_ALT_C_COMMAND=$FZF_DIRECTORIES_COMMAND
 
-export FZF_DEFAULT_OPTS="--border --preview-window=border-rounded --margin=1 --scrollbar=▌▐ --info=right"
+export FZF_DEFAULT_OPTS="--border --preview-window=border-rounded --margin=1 --scrollbar=▌▐ --info=right --ansi"
 export FZF_ALT_C_OPTS="--preview 'tree -L 1 -C {}'"
 export FZF_CTRL_R_OPTS=""
 export FZF_CTRL_T_OPTS="--preview '[ -d {} ] && tree -L 1 -C {} || ([ -f {} ] && bat -n --color=always {})'"
