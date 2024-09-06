@@ -24,7 +24,7 @@ export FZF_DIRECTORIES_COMMAND="LS_COLORS='$FZF_LSCOLORS' fd -j4 -u --type d --c
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export FZF_ALT_C_COMMAND=$FZF_DIRECTORIES_COMMAND
 
-export FZF_DEFAULT_OPTS="--border --preview-window=border-rounded --margin=1 --scrollbar=▌▐ --info=right --ansi"
+export FZF_DEFAULT_OPTS="--border --preview-window=border-rounded --margin=1 --scrollbar=▌▐ --info=right --ansi --color=bg+:#403c37"
 export FZF_ALT_C_OPTS="--preview 'tree -L 1 -C {}'"
 export FZF_CTRL_R_OPTS=""
 export FZF_CTRL_T_OPTS="--preview '[ -d {} ] && tree -L 1 -C {} || ([ -f {} ] && bat -n --color=always {})'"
