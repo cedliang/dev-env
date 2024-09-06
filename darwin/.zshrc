@@ -11,11 +11,11 @@ export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# export FZF_DEFAULT_COMMAND='fd -u'
-# export FZF_DIRECTORIES_COMMAND='fd -u --type d'
+export FZF_DEFAULT_COMMAND='fd -u'
+export FZF_DIRECTORIES_COMMAND='fd -u --type d'
 
-export FZF_DEFAULT_COMMAND="fd -u . -E 'Library*'"
-export FZF_DIRECTORIES_COMMAND="fd -u --type d . -E 'Library*'"
+# export FZF_DEFAULT_COMMAND="fd -u . -E 'Library*'"
+# export FZF_DIRECTORIES_COMMAND="fd -u --type d . -E 'Library*'"
 
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export FZF_ALT_C_COMMAND=$FZF_DIRECTORIES_COMMAND
