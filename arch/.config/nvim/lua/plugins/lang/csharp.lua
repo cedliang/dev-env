@@ -98,16 +98,16 @@ omnisharp_on_attach_func = function(client, _)
         "<cmd>lua require('omnisharp_extended').lsp_definition()<cr>",
         desc = "Goto Definition (omnisharp)",
     }
-    keys[#keys + 1] = {
-        "gr",
-        "<cmd>lua require('omnisharp_extended').lsp_references()<cr>",
-        desc = "Goto References (omnisharp)",
-    }
-    keys[#keys + 1] = {
-        "gI",
-        "<cmd>lua require('omnisharp_extended').lsp_implementation()<cr>",
-        desc = "Goto Implementations (omnisharp)",
-    }
+    -- keys[#keys + 1] = {
+    --     "gr",
+    --     "<cmd>lua require('omnisharp_extended').lsp_references()<cr>",
+    --     desc = "Goto References (omnisharp)",
+    -- }
+    -- keys[#keys + 1] = {
+    --     "gI",
+    --     "<cmd>lua require('omnisharp_extended').lsp_implementation()<cr>",
+    --     desc = "Goto Implementations (omnisharp)",
+    -- }
     keys[#keys + 1] = {
         "gy",
         "<cmd>lua require('omnisharp_extended').lsp_type_definition()<cr>",
