@@ -95,22 +95,22 @@ omnisharp_on_attach_func = function(client, _)
     local keys = require("lazyvim.plugins.lsp.keymaps").get()
     keys[#keys + 1] = {
         "gd",
-        "<cmd>lua require('omnisharp_extended').telescope_lsp_definition()<cr>",
+        "<cmd>lua require('omnisharp_extended').lsp_definition()<cr>",
         desc = "Goto Definition (omnisharp)",
     }
     keys[#keys + 1] = {
         "gr",
-        "<cmd>lua require('omnisharp_extended').telescope_lsp_references()<cr>",
+        "<cmd>lua require('omnisharp_extended').lsp_references()<cr>",
         desc = "Goto References (omnisharp)",
     }
     keys[#keys + 1] = {
         "gI",
-        "<cmd>lua require('omnisharp_extended').telescope_lsp_implementation()<cr>",
+        "<cmd>lua require('omnisharp_extended').lsp_implementation()<cr>",
         desc = "Goto Implementations (omnisharp)",
     }
     keys[#keys + 1] = {
         "gy",
-        "<cmd>lua require('omnisharp_extended').telescope_lsp_type_definition()<cr>",
+        "<cmd>lua require('omnisharp_extended').lsp_type_definition()<cr>",
         desc = "Goto T[y]pe Definition (omnisharp)",
     }
 end
