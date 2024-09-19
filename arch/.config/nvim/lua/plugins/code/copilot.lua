@@ -1,5 +1,6 @@
 return {
     { import = "lazyvim.plugins.extras.coding.copilot" },
+    { import = "lazyvim.plugins.extras.coding.copilot-chat" },
     -- {
     --     "hrsh7th/nvim-cmp",
     --     opts = function(_, opts)
