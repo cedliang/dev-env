@@ -171,8 +171,21 @@ omnisharp_func = function(_, opts)
             RoslynExtensionsOptions = {
                 EnableAnalyzersSupport = true,
                 EnableImportCompletion = true,
-                AnalyzeOpenDocumentsOnly = false,
                 EnableDecompilationSupport = true,
+                InlayHintsOptions = {
+                    EnableForParameters = true,
+                    ForLiteralParameters = true,
+                    ForIndexerParameters = true,
+                    ForObjectCreationParameters = true,
+                    ForOtherParameters = true,
+                    EnableForTypes = true,
+                    ForImplicitVariableTypes = true,
+                    ForLambdaParameterTypes = true,
+                    ForImplicitObjectCreation = true,
+                    SuppressForParametersThatDifferOnlyBySuffix = true,
+                    SuppressForParametersThatMatchMethodIntent = true,
+                    SuppressForParametersThatMatchArgumentName = true,
+                },
             },
         },
     })
