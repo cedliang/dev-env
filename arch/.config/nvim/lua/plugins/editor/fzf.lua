@@ -1,5 +1,4 @@
 return {
-    { import = "lazyvim.plugins.extras.editor.fzf" },
     {
         "ibhagwan/fzf-lua",
         opts = function(_, opts)
