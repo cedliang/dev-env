@@ -8,6 +8,7 @@ opt.softtabstop = 4
 opt.shiftwidth = 4
 
 opt.clipboard = "unnamedplus"
+vim.g.snacks_animate = false
 -- -- uncomment to force clipboard to use OSC 52
 -- -- useful on headless remotes
 -- local function paste()
