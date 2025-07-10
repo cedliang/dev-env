@@ -10,7 +10,7 @@ local function return_main()
         {
             "nvim-treesitter/nvim-treesitter",
             opts = function(_, opts)
-                table.insert(opts.ensure_installed, { "xml", "c_sharp" })
+                vim.list_extend(opts.ensure_installed, { "xml", "c_sharp" })
             end,
         },
         {

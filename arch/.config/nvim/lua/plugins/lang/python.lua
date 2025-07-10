@@ -2,7 +2,7 @@ return {
     {
         "nvim-treesitter/nvim-treesitter",
         opts = function(_, opts)
-            table.insert(opts.ensure_installed, { "ninja", "python", "rst", "toml" })
+            vim.list_extend(opts.ensure_installed, { "ninja", "python", "rst", "toml" })
         end,
     },
     {

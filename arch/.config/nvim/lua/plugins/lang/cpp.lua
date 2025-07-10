@@ -33,7 +33,7 @@ return {
     -- {
     --     "nvim-treesitter/nvim-treesitter",
     --     opts = function(_, opts)
-    --         table.insert(opts.ensure_installed, { "cmake", "cpp" })
+    --         vim.list_extend(opts.ensure_installed, { "cmake", "cpp" })
     --     end,
     -- },
     -- {
