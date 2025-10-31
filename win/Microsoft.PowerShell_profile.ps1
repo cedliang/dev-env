@@ -4,19 +4,17 @@ Import-Module PSFzf
 Start-SshAgent -Quiet
 
 Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
-Set-PSReadLineKeyHandler -Chord 'Ctrl+u' -Function BackwardKillLine
-Set-PSReadLineKeyHandler -Chord 'Ctrl+w' -Function BackwardKillWord
-Set-PSReadLineKeyHandler -Chord 'Control+LeftArrow' -Function BackwardWord
-Set-PSReadLineKeyHandler -Chord 'Control+RightArrow' -Function ForwardWord
-# Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
+Set-PSReadLineOption -EditMode Emacs
+Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
+Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
+Set-PSReadLineKeyHandler -Chord "Ctrl+Spacebar" -Function AcceptSuggestion 
+Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r' -PSReadlineChordSetLocation 'Alt+c' -PSReadlineChordReverseHistoryArgs 'Alt+a'
 
 
 oh-my-posh init pwsh | Invoke-Expression
 
 # Invoke-Expression "$PSScriptRoot\aliases.ps1"
-Set-Alias -Name msbuild -Value 'C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MSBuild.exe'
-
-
 
 function Get-GitMainBranch {
     # Check if we are in a git repository
@@ -270,4 +268,5 @@ function gwta { param($path); git worktree add $path }
 function gwtls  { git worktree list }
 function gwtmv { param($oldPath, $newPath); git worktree move $oldPath $newPath }
 function gwtrm { param($path); git worktree remove $path }
+
 
