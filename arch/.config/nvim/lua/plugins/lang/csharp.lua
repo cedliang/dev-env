@@ -12,6 +12,33 @@ return {
         },
         opts = {
             servers = {
+                ["*"] = {
+                    keys = {
+                        {
+                            "gd",
+                            function()
+                                if vim.bo.filetype == "cs" then
+                                    require("omnisharp_extended").lsp_definition()
+                                else
+                                    require("fzf-lua").lsp_definitions({ jump1 = true, ignore_current_line = true })
+                                end
+                            end,
+                            desc = "Goto Definition",
+                            has = "definition",
+                        },
+                        {
+                            "gy",
+                            function()
+                                if vim.bo.filetype == "cs" then
+                                    require("omnisharp_extended").lsp_type_definition()
+                                else
+                                    require("fzf-lua").lsp_typedefs({ jump1 = true, ignore_current_line = true })
+                                end
+                            end,
+                            desc = "Goto T[y]pe Definition",
+                        },
+                    },
+                },
                 omnisharp = {
                     handlers = {
                         ["textDocument/definition"] = function(...)
